@@ -115,17 +115,21 @@
     section {
       display: block;
     }
+
     body {
       line-height: 1;
     }
+
     ol,
     ul {
       list-style: none;
     }
+
     blockquote,
     q {
       quotes: none;
     }
+
     blockquote:before,
     blockquote:after,
     q:before,
@@ -133,6 +137,7 @@
       content: "";
       content: none;
     }
+
     table {
       border-collapse: collapse;
       border-spacing: 0;
@@ -143,30 +148,29 @@
     #header {
       height: 6.4rem;
     }
+
     #header_wrap {
-      height: 100%;
-      width: 1024px;
-      margin: auto;
       display: flex;
-      flex-direction: row;
+      height: 100%;
+      width: 100vw;
+      margin: auto;
     }
 
     #header_content {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
     }
 
     #header_content form {
       display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
       align-items: center;
+      justify-content: space-evenly;
     }
 
     img {
       display: block;
-      margin: 0 auto;
+      margin: 0px 15px;
     }
 
     .header_menu_selected {
@@ -187,40 +191,52 @@
       border: none;
     }
 
+    .search_input {
+      width: 250px;
+      padding: 10px;
+      margin-left: 70px;
+      margin-right: 30px;
+      border-radius: 0.6rem;
+      border: none;
+      outline: none;
+      background-color: #f2f3f6;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
     .chat_button {
       border: 0.5px solid #b8bcc3;
       border-radius: 0.3rem;
       font-size: 1rem;
       font-weight: 600;
-      margin: auto;
       width: 80px;
       height: 40px;
       display: flex;
-      justify-content: center; /*수평 가운데 정렬*/
-      align-items: center; /*수직 가운데 정렬*/
+      justify-content: center;
+      align-items: center;
       background-color: white;
     }
 
     .body_content_1 {
+      display: flex;
+      position: relative;
       height: 700px;
-      width: 1024px;
+      width: 100vw;
       margin: auto;
       background-color: #fbf7f2;
-      display: flex;
-      flex-direction: row;
     }
 
     .body_wrap {
       padding: 20px;
       width: 100%;
+      margin-left: 30px;
     }
 
     .big {
       font-size: 3.2rem;
       line-height: 1.3;
-      font-weight: 500;
+      font-weight: 600;
       padding-top: 16rem;
-      margin-bottom: 2.6rem;
+      margin-bottom: 2rem;
       letter-spacing: -0.4px;
     }
 
@@ -229,7 +245,7 @@
       line-height: 1.3;
       font-weight: 500;
       padding-top: 16rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       letter-spacing: -0.4px;
     }
 
@@ -238,9 +254,47 @@
       font-weight: 400;
       line-height: 1.5;
       letter-spacing: -0.3px;
+      color: #7c7c7c;
+    }
+
+    .CTA-Btn {
+      color: white;
+      font-size: medium;
+      font-weight: 600;
+      border: none;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      background-color: #FF6F0F;
+      margin-top: 10px;
+      margin-left: 5px;
+      transition: background-color 0.3s ease-in-out;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .CTA-Btn img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .CTA-Btn p {
+      text-align: center;
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      margin-left: 4px;
+      font-weight: 700;
+      vertical-align: middle;
+      line-height: 28px;
+    }
+
+    .CTA-Btn:hover {
+      background-color: #dcddde;
     }
 
     .image_1 {
+      position: absolute;
       margin-top: 120px;
     }
 
@@ -248,24 +302,12 @@
       margin-right: 60px;
     }
 
-    .search_input {
-      width: 250px;
-      padding: 10px;
-      margin-left: 70px;
-      border-radius: 0.6rem;
-      border: none;
-      outline: none;
-      background-color: #f2f3f6;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
     .body_content_2 {
+      display: flex;
       height: 700px;
-      width: 1024px;
+      width: 100vw;
       margin: auto;
       background-color: white;
-      display: flex;
-      flex-direction: row;
     }
 
     .gray_button {
@@ -287,7 +329,7 @@
 
     .body_content_3 {
       height: 700px;
-      width: 1024px;
+      width: 100vw;
       margin: auto;
       background-color: #e6f3e6;
       display: flex;
@@ -295,7 +337,7 @@
     }
     .body_content_4 {
       height: 700px;
-      width: 1024px;
+      width: 100vw;
       margin: auto;
       background-color: #f8f9fa;
       display: flex;
@@ -417,12 +459,18 @@
       margin-bottom: 50px;
       margin-left: 20px;
     }
+
   </style>
   <body>
     <div id="header">
       <div id="header_wrap">
         <div id="header_content">
-          <img src="./logo.png" width="150" height="auto" />
+          <img
+            src="data:image/png;base64,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"
+            alt="당근마켓 로고"
+            width="100"
+            height="auto"
+          />
         </div>
         <div id="header_content">
           <button class="header_menu_selected">중고거래</button>
@@ -454,20 +502,37 @@
     <div id="body">
       <div class="body_content_1">
         <div class="body_wrap">
-          <h2 class="big">당신 근처의 <br />당근마켓</h2>
+          <h2 class="big">당신 근처의<br />지역 생활 커뮤니티</h2>
           <p class="small">
-            중고 거래부터 동네 정보까지, 이웃과 함께해요.<br />가깝고 따뜻한
-            당신의 근처를 만들어요.
+            동네라서 가능한 모든 것<br />당근에서 가까운 이웃과 함께해요.
           </p>
+
+          <button class="CTA-Btn">
+            <img
+              class="fixed-google-play"
+              alt="Google Play"
+              src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/google-play-white-0531cab5dbe15262e226cfb4acebeb316708ae0034d50b86ad4d809a03b6f5f0.svg"
+            /><p>Google Play</p>
+          </button>
+
+          <button class="CTA-Btn">
+            <img
+              class="fixed-apple-store"
+              alt="App Store"
+              src="https://d1unjqcospf8gs.cloudfront.net/assets/home/base/header/apple-store-white-9ebb10b431c549dd19f032f70e6762df307939b5add030265d9c2dea888b2d03.svg"
+            /><p>App Store</p>
+          </button>
+          </div>
         </div>
-        <div class="body_wrap">
-          <img
-            class="image_1"
-            src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/image-top-d6869a79bc4cb58ea59aa5a408decfdf4a4ba60ac639837081da12861083cdbb.webp"
-            width="650"
-            height="auto"
-          />
-        </div>
+        
+        <!--이미지 다시 넣어보겠습니다!
+        <img
+          class="image_1"
+          img srcset="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/rebranded-image-top-e765d561ee9df7f5ab897f622b8b5a35aaa70314f734e097ea70e6c83bdd73f1.webp " class="home-main-image-top" alt="중고거래, 동네생활 질문글, 알바와 동네업체" src="https://d1unjqcospf8gs.cloudfront.net/assets/home/main/3x/rebranded-image-top-eb44f81acb1938b57ba029196887cdd56fbb66dc46aa5d8c6d8392a7d8c9e671.png"
+          width="650"
+          height="auto"
+        /> -->
+        
       </div>
       <div class="body_content_2">
         <div class="body_wrap">
